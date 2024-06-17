@@ -20,6 +20,10 @@ Make sure you have exactly the versions of libraries and boards installed as des
 
 If you have an older version of the AirGradient PCB not mentioned in the example files, please downgrade this library to version 2.4.15 to support these legacy boards.
 
+## Development
+
+Development documents are available in [docs/compiling.md](docs/compiling.md).
+
 ## Help & Support
 
 If you have any questions or problems, check out [our forum](https://forum.airgradient.com/). 
