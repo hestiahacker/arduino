@@ -8,7 +8,7 @@ The quick version is this:
 - Tools -> Board menu -> Boards Manager...
 - Search for "ESP32"
 - Install the library by Espressif
-- Tools -> Board -> esp32 -> Lolin C3 Mini
+- Tools -> Board -> esp32 -> ESP32C3 Dev Module
 
 ## Additional settings
 The AirGradient One requires a number of additional settings in the Arduino IDE. These can be found in comments at the top of examples/OneOpenAir/OneOpenAir.ino.
