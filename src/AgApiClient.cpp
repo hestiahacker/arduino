@@ -2,6 +2,7 @@
 #include "AgConfigure.h"
 #include "AirGradient.h"
 #include "Libraries/Arduino_JSON/src/Arduino_JSON.h"
+#include <WiFiClient.h>
 #ifdef ESP8266
 #include <ESP8266HTTPClient.h>
 #include <ESP8266WiFi.h>
@@ -105,9 +106,9 @@ bool AgApiClient::postToServer(String data) {
     return true;
   }
 
-  if (WiFi.isConnected() == false) {
-    return false;
-  }
+  //if (WiFi.isConnected() == false) {
+  //  return false;
+  //}
 
   String uri =
       "http://hw.airgradient.com/sensors/airgradient:" + ag->deviceId() +

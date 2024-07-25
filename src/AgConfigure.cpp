@@ -241,7 +241,7 @@ bool Configuration::parse(String data, bool isLocal) {
   bool changed = false;
 
   /** Get ConfigurationControl */
-  String lastCtrl = jconfig[jprop_configurationControl];
+  const String lastCtrl = jconfig[jprop_configurationControl];
   const char *msg = "Monitor set to accept only configuration from the "
                     "cloud. Use property configurationControl to change.";
 
@@ -287,7 +287,8 @@ bool Configuration::parse(String data, bool isLocal) {
     }
 
     /** Ignore all configuration value if 'configurationControl' is 'cloud' */
-    if (jconfig[jprop_configurationControl] ==
+    const String ctrl = jconfig[jprop_configurationControl];
+    if (ctrl ==
         String(CONFIGURATION_CONTROL_NAME
                    [ConfigurationControl::ConfigurationControlCloud])) {
       failedMessage = String(msg);
@@ -295,7 +296,8 @@ bool Configuration::parse(String data, bool isLocal) {
       return false;
     }
   } else {
-    if (jconfig[jprop_configurationControl] ==
+    const String ctrl = jconfig[jprop_configurationControl];
+    if (ctrl ==
         String(CONFIGURATION_CONTROL_NAME
                    [ConfigurationControl::ConfigurationControlLocal])) {
       failedMessage = "Cloud configure ignored";
